@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Header from '@/components/Login';
+import Login from '@/components/Login';
 
 Vue.use(Router);
 
@@ -9,7 +9,7 @@ export default new Router({
     {
       path: '/',
       name: 'Login',
-      component: Header
+      component: Login
     }
   ]
 });

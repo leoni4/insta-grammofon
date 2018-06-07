@@ -13,6 +13,7 @@
 
 html,
 body {
-  font-family: Edelsans;
+  font-family: 'Edelsans';
   background: #fff;
+  user-select: none;
 }
