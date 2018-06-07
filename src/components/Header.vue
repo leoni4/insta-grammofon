@@ -1,30 +1,43 @@
 <template>
-  <el-tabs v-model="activeName" @tab-click="handleClick">
-    <el-tab-pane label="User" name="first">User</el-tab-pane>
-    <el-tab-pane label="Config" name="second">Config</el-tab-pane>
-    <el-tab-pane label="Role" name="third">Role</el-tab-pane>
-    <el-tab-pane label="Task" name="fourth">Task</el-tab-pane>
-  </el-tabs>
+  <div class="header-app-menu">
+    <el-menu  class="el-menu-demo" mode="horizontal" :default-active="activeTab" @tab-click="handleClick">
+      <el-menu-item
+        v-for="(item, index) in menuItems"
+        :index="item.name"
+      >
+        {{item.title}}
+      </el-menu-item>
+    </el-menu>
+  </div>
 </template>
 
 <script>
-   // export default {
-   //     name: "Header"
-    //}
-    export default {
-      data() {
-        return {
-          activeName: 'first'
-        };
-      },
-      methods: {
-        handleClick(tab, event) {
-          console.log(tab, event);
+export default {
+  data () {
+    return {
+      menuItems: [
+        {
+          title: 'Liking and Folloving',
+          name: 1
+        },
+        {
+          title: 'Competitors',
+          name: 2
         }
-      }
+      ],
+      activeTab: 1
     };
+  },
+  methods: {
+    handleClick (tab, event) {
+      console.log(tab, event);
+    }
+  }
+};
 </script>
 
 <style scoped>
-
+.header-app-menu{
+  box-shadow: inset 0 10px 10px -10px rgba(0,0,0,.2);
+}
 </style>

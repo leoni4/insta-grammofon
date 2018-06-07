@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Edelsans';
+  src: url('/src/assets/fonts/edelsans_regular.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Edelsans';
+  src: url('/src/assets/fonts/edelsans_ultralight.otf') format('opentype');;
+  font-weight: 100;
+  font-style: normal;
+}
+
+html,
 body {
-  background: #000;
+  font-family: Edelsans;
+  background: #fff;
 }
