@@ -8,8 +8,7 @@ Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
 new Vue({
-  el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  el: '#app',
+  render: h => h(App)
 });

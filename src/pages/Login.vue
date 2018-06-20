@@ -19,12 +19,12 @@
     <el-row  type="flex" justify="center">
       <el-col :span="50" >
         <el-input type="password" placeholder="Password" v-model="password" clearable>
-          <el-button v-if="accounts.length" slot="append">Login</el-button>
+          <el-button @click="onLogin()" v-if="accounts.length" slot="append">Login</el-button>
         </el-input>
       </el-col>
     </el-row>
     <el-row  type="flex" justify="center">
-      <el-button v-if="!accounts.length">Login</el-button>
+      <el-button @click="onLogin()" v-if="!accounts.length">Login</el-button>
     </el-row>
   </div>
 </template>
@@ -33,17 +33,22 @@
     export default {
       data () {
         return {
-          login: '',
-          select: '',
-          password: '',
-          accounts: [
-            {
-              name: 'insta_grammofon'
-            }
-          ]
+            login: '',
+            select: '',
+            password: '',
+            accounts: [
+              {
+                name: 'insta_grammofon'
+              }
+            ],
+        }
+      },
+      methods:{
+        onLogin(){
+          document.location = '#/liking-page'
         }
       }
-    }
+    };
 </script>
 
 <style scoped>
